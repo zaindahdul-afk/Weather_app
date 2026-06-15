@@ -10,7 +10,7 @@ CITY = input("Enter city name: ").strip()
 
 response = requests.get(
     "https://api.openweathermap.org/data/2.5/weather",
-    params={"q": CITY, "appid": API_KEY, "units": "metric"},
+    params={"q": CITY, "appid": API_KEY, "units": "imperial"},
 )
 
 data = response.json()
@@ -27,6 +27,6 @@ else:
 
     print(f"\nWeather in {city_name}, {country}:")
     print(f"  Condition:  {description}")
-    print(f"  Temp:       {temp}°C")
-    print(f"  Feels like: {feels_like}°C")
+    print(f"  Temp:       {temp}°F")
+    print(f"  Feels like: {feels_like}°F")
     print(f"  Humidity:   {humidity}%")
