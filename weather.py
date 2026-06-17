@@ -24,9 +24,11 @@ else:
     description = data["weather"][0]["description"].capitalize()
     city_name = data["name"]
     country = data["sys"]["country"]
+    wind_speed = data["wind"]["speed"]
 
     print(f"\nWeather in {city_name}, {country}:")
     print(f"  Condition:  {description}")
     print(f"  Temp:       {temp}°F")
     print(f"  Feels like: {feels_like}°F")
     print(f"  Humidity:   {humidity}%")
+    print(f"  Wind speed: {wind_speed} mph")
